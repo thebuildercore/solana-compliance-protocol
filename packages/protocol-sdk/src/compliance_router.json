@@ -1,0 +1,177 @@
+{
+  "address": "DMSJPGeWdenYtxCxqpEH2Jm9gJTSuacujo9doRDgaiSX",
+  "metadata": {
+    "name": "compliance_router",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Created with Anchor"
+  },
+  "instructions": [
+    {
+      "name": "send_with_context",
+      "discriminator": [
+        83,
+        182,
+        224,
+        110,
+        117,
+        47,
+        37,
+        10
+      ],
+      "accounts": [
+        {
+          "name": "sender",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "sender_token_account",
+          "writable": true
+        },
+        {
+          "name": "receiver_token_account",
+          "writable": true
+        },
+        {
+          "name": "receiver",
+          "docs": [
+            "✅ Explicit receiver"
+          ]
+        },
+        {
+          "name": "sender_treasury",
+          "docs": [
+            "✅ Sender country treasury"
+          ],
+          "writable": true
+        },
+        {
+          "name": "receiver_treasury",
+          "docs": [
+            "✅ Receiver country treasury"
+          ],
+          "writable": true
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        }
+      ],
+      "args": [
+        {
+          "name": "amount",
+          "type": "u64"
+        },
+        {
+          "name": "category",
+          "type": "string"
+        },
+        {
+          "name": "sender_tax",
+          "type": "u64"
+        },
+        {
+          "name": "receiver_tax",
+          "type": "u64"
+        },
+        {
+          "name": "sender_region",
+          "type": "string"
+        },
+        {
+          "name": "receiver_region",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "name": "CompliantTransferEvent",
+      "discriminator": [
+        181,
+        75,
+        110,
+        45,
+        173,
+        205,
+        196,
+        213
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "InvalidAmount",
+      "msg": "Invalid transfer amount"
+    },
+    {
+      "code": 6001,
+      "name": "InvalidTax",
+      "msg": "Tax exceeds total amount"
+    },
+    {
+      "code": 6002,
+      "name": "InvalidOwner",
+      "msg": "Sender does not own token account"
+    },
+    {
+      "code": 6003,
+      "name": "MathOverflow",
+      "msg": "Math overflow"
+    },
+    {
+      "code": 6004,
+      "name": "InvalidMint",
+      "msg": "Token mint mismatch"
+    }
+  ],
+  "types": [
+    {
+      "name": "CompliantTransferEvent",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "sender",
+            "type": "pubkey"
+          },
+          {
+            "name": "receiver",
+            "type": "pubkey"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "category",
+            "type": "string"
+          },
+          {
+            "name": "sender_tax",
+            "type": "u64"
+          },
+          {
+            "name": "receiver_tax",
+            "type": "u64"
+          },
+          {
+            "name": "sender_region",
+            "type": "string"
+          },
+          {
+            "name": "receiver_region",
+            "type": "string"
+          },
+          {
+            "name": "timestamp",
+            "type": "i64"
+          }
+        ]
+      }
+    }
+  ]
+}

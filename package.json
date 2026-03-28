@@ -1,0 +1,8 @@
+{
+  "name": "stable-compliance-protocol",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ]
+}
