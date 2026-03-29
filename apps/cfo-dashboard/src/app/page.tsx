@@ -742,7 +742,7 @@ export default function LandingPage() {
             {/* <a href="#" style={{ fontSize: 14, fontWeight: 700, color: '#fff', textDecoration: 'none', padding: '12px 28px', background: C.accent, borderRadius: 8, letterSpacing: '-0.01em' }}>
               View Dashboard
             </a> */}
-            <a href="https://YOUR_WALLET_VERCEL_URL" target="_blank" rel="noreferrer" style={{ fontSize: 12, fontWeight: 600, color: C.txt, textDecoration: 'none', padding: '6px 16px', border: `1px solid ${C.borderHi}`, borderRadius: 6, background: C.card }}>Wallet ↗</a>
+            <a href="https://solana-compliance-protocol-mock-wal.vercel.app/" target="_blank" rel="noreferrer" style={{ fontSize: 12, fontWeight: 600, color: C.txt, textDecoration: 'none', padding: '6px 16px', border: `1px solid ${C.borderHi}`, borderRadius: 6, background: C.card }}>Wallet ↗</a>
          <Link href="/dashboard" style={{ fontSize: 12, fontWeight: 600, color: C.accent, textDecoration: 'none', padding: '6px 16px', border: `1px solid ${C.accent}44`, borderRadius: 6, background: C.accentDim }}>CFO Dashboard</Link>
 
             <a href="#" style={{ fontSize: 14, fontWeight: 600, color: C.txt, textDecoration: 'none', padding: '12px 28px', border: `1px solid ${C.borderHi}`, borderRadius: 8, background: C.card }}>
