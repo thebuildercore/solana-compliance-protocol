@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "cd ../../packages/protocol-sdk && bun install && bunx tsc && cd ../../apps/cfo-dashboard && next build",
     "start": "next start",
     "lint": "eslint"
   },
